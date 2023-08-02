@@ -1,3 +1,4 @@
+//alterado no git
 package application;
 
 import java.util.Locale;
@@ -10,14 +11,14 @@ public class Negativos {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("Quantos números você vai digitar? ");
+		System.out.print("Quantos nÃºmeros vocÃª vai digitar? ");
 		int quant = sc.nextInt();
 		
 		int[] vect = new int[quant];
 		
 		for (int i=0; i<vect.length; i++) {
 			System.out.println();
-			System.out.print("Digite um número: ");
+			System.out.print("Digite um nÃºmero: ");
 			vect[i] = sc.nextInt();
 		}
 		System.out.println();
