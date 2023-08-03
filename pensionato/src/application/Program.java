@@ -34,7 +34,7 @@ public class Program {
 		System.out.println("Busy rooms:");
 		for (int i=0; i<rooms.length; i++) {
 			if (rooms[i] != null) {
-				System.out.println(i + ": " + rooms[i].getName() + ", " + rooms[i].getEmail());
+				System.out.println(i + ": " + rooms[i].toString());
 			}
 		}
 		
