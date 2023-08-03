@@ -15,7 +15,7 @@ public class Program {
 		System.out.print("Quantas pessoas serão digitadas? ");
 		int quant = sc.nextInt();
 		double somaAltura = 0;
-		int quantPessoasMenor = 0;
+		double quantPessoasMenor = 0;
 		
 		Pessoa[] pessoa = new Pessoa[quant];
 		
@@ -31,16 +31,22 @@ public class Program {
 			double altura = sc.nextDouble();
 			System.out.println();
 			
+			if (idade < 16) {
+				quantPessoasMenor++;
+			}
+			
 			somaAltura += altura;
 			pessoa[i] = new Pessoa(nome, idade, altura);
 			
 		}
 		System.out.println();
 		System.out.printf("Altura média: %.2f%n", (somaAltura/pessoa.length));
+		double porcentagemPessoasmenores = (quantPessoasMenor/pessoa.length)*100;
+		System.out.printf("Pessoas com menos de 16: %.1f%%\n", porcentagemPessoasmenores);
 		
 		for (int i=0; i<pessoa.length; i++) {
 			if (pessoa[i].getIdade() < 16) {
-				quantPessoasMenor++;
+				System.out.println(pessoa[i].getNome());
 			}
 		}
 		
